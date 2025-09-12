@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2D5A27; /* Deep forest green for trust and growth */
+  --color-primary-50: #F0F9F0; /* Very light green */
+  --color-primary-100: #D4F1D4; /* Light green */
+  --color-primary-200: #A8E3A8; /* Medium light green */
+  --color-primary-300: #7DD57D; /* Medium green */
+  --color-primary-400: #52C752; /* Medium dark green */
+  --color-primary-500: #2D5A27; /* Primary green */
+  --color-primary-600: #245020; /* Dark green */
+  --color-primary-700: #1B3C1B; /* Darker green */
+  --color-primary-800: #122815; /* Very dark green */
+  --color-primary-900: #091410; /* Darkest green */
+
+  /* Secondary Colors */
+  --color-secondary: #8B4513; /* Rich earth brown for stability and authenticity */
+  --color-secondary-50: #FDF8F3; /* Very light brown */
+  --color-secondary-100: #F9E8D9; /* Light brown */
+  --color-secondary-200: #F3D1B3; /* Medium light brown */
+  --color-secondary-300: #EDBA8D; /* Medium brown */
+  --color-secondary-400: #E7A367; /* Medium dark brown */
+  --color-secondary-500: #8B4513; /* Primary brown */
+  --color-secondary-600: #7A3D11; /* Dark brown */
+  --color-secondary-700: #69350F; /* Darker brown */
+  --color-secondary-800: #582D0D; /* Very dark brown */
+  --color-secondary-900: #47250B; /* Darkest brown */
+
+  /* Accent Colors */
+  --color-accent: #E8B04B; /* Warm gold for optimism and achievement highlights */
+  --color-accent-50: #FEFBF5; /* Very light gold */
+  --color-accent-100: #FDF4E1; /* Light gold */
+  --color-accent-200: #FBE9C3; /* Medium light gold */
+  --color-accent-300: #F9DEA5; /* Medium gold */
+  --color-accent-400: #F7D387; /* Medium dark gold */
+  --color-accent-500: #E8B04B; /* Primary gold */
+  --color-accent-600: #D19E42; /* Dark gold */
+  --color-accent-700: #BA8C39; /* Darker gold */
+  --color-accent-800: #A37A30; /* Very dark gold */
+  --color-accent-900: #8C6827; /* Darkest gold */
+
+  /* Background Colors */
+  --color-background: #FAFAF9; /* Warm white for comfortable extended reading */
+  --color-surface: #F5F5F4; /* Subtle contrast for card elements and sections */
+
+  /* Text Colors */
+  --color-text-primary: #1C1C1C; /* Near black for excellent readability */
+  --color-text-secondary: #6B7280; /* Medium gray for supporting information */
+
+  /* Status Colors */
+  --color-success: #059669; /* Natural green for positive confirmations */
+  --color-success-50: #ECFDF5; /* Very light success green */
+  --color-success-100: #D1FAE5; /* Light success green */
+  --color-success-200: #A7F3D0; /* Medium light success green */
+  --color-success-300: #6EE7B7; /* Medium success green */
+  --color-success-400: #34D399; /* Medium dark success green */
+  --color-success-500: #059669; /* Primary success green */
+  --color-success-600: #047857; /* Dark success green */
+  --color-success-700: #065F46; /* Darker success green */
+  --color-success-800: #064E3B; /* Very dark success green */
+  --color-success-900: #022C22; /* Darkest success green */
+
+  --color-warning: #D97706; /* Amber for important but non-critical alerts */
+  --color-warning-50: #FFFBEB; /* Very light warning amber */
+  --color-warning-100: #FEF3C7; /* Light warning amber */
+  --color-warning-200: #FDE68A; /* Medium light warning amber */
+  --color-warning-300: #FCD34D; /* Medium warning amber */
+  --color-warning-400: #FBBF24; /* Medium dark warning amber */
+  --color-warning-500: #D97706; /* Primary warning amber */
+  --color-warning-600: #B45309; /* Dark warning amber */
+  --color-warning-700: #92400E; /* Darker warning amber */
+  --color-warning-800: #78350F; /* Very dark warning amber */
+  --color-warning-900: #451A03; /* Darkest warning amber */
+
+  --color-error: #DC2626; /* Clear red for helpful error guidance */
+  --color-error-50: #FEF2F2; /* Very light error red */
+  --color-error-100: #FEE2E2; /* Light error red */
+  --color-error-200: #FECACA; /* Medium light error red */
+  --color-error-300: #FCA5A5; /* Medium error red */
+  --color-error-400: #F87171; /* Medium dark error red */
+  --color-error-500: #DC2626; /* Primary error red */
+  --color-error-600: #B91C1C; /* Dark error red */
+  --color-error-700: #991B1B; /* Darker error red */
+  --color-error-800: #7F1D1D; /* Very dark error red */
+  --color-error-900: #450A0A; /* Darkest error red */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-accent {
+    font-family: 'Crimson Text', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-md font-semibold transition-all duration-300 ease-out hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-md font-semibold transition-all duration-300 ease-out hover:bg-secondary-600 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-primary px-6 py-3 rounded-md font-semibold transition-all duration-300 ease-out hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-surface rounded-md p-6 shadow-sm border border-surface;
+  }
+  
+  .card-elevated {
+    @apply bg-white rounded-md p-6 shadow-md border border-surface;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-surface rounded-md bg-white text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ease-out;
+  }
+  
+  .fade-in {
+    @apply opacity-0 translate-y-4 transition-all duration-400 ease-out;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .shadow-subtle {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-elevated {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .transition-micro {
+    transition: all 200ms ease-out;
+  }
+  
+  .transition-standard {
+    transition: all 300ms ease-out;
+  }
+  
+  .transition-page {
+    transition: all 600ms ease-out;
+  }
+}
